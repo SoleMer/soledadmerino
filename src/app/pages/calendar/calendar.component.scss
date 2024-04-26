@@ -22,3 +22,16 @@
     border: none;
     scrollbar-color: black;
   }
+
+  @media (max-width: 1499px) {
+    .content {
+      align-content: center;
+    }
+    .calendar-container {
+      width: 90%;
+    }
+    .call-to-action {
+      color: white;
+      font-size: x-large;
+  }
+  }

@@ -1,14 +1,18 @@
 <header>
     <nav>
-        <ul>
+        <div class="menu-btn" [class.is-open]="isMenuOpen"  (click)="toggleMenu()">
+            <div class="menu-btn__burger">
+            </div>
+        </div>
+        <ul class="overlay" [class.is-open]="isMenuOpen">
             <li>
-                <a href="/home">Home</a>
+                <a href="/home" class="menu-item" >Home</a>
             </li>
             <li>
-                <a href="/calendar">Agendá una entrevista</a>
+                <a href="/calendar" class="menu-item">Agendá una entrevista</a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/soledad-merino/" target="_blank">linkedin</a>
+                <a href="https://www.linkedin.com/in/soledad-merino/" class="menu-item" target="_blank">linkedin</a>
             </li>
         </ul>
     </nav>
