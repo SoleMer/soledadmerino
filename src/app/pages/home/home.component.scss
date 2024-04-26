@@ -142,6 +142,9 @@ table tbody {
   h1 {
     font-size: 2em;
   }
+  .mobile {
+    display: none;
+  }
 }
 
 @media (min-width: 850px) and (max-width: 1499px) {
@@ -208,6 +211,10 @@ table tbody {
     font-size: 2em;
   }
 
+  .mobile {
+    display: none;
+  }
+
 }
 
 /* Estilos para pantallas pequeñas (móviles) */
@@ -217,12 +224,13 @@ table tbody {
 }
 
   .right-content {
-    flex: 0;
+    display: none;
   }
 
   .left-content {
     flex: 1;
     padding-bottom: 20px;
+    width: 90%;
   }
 
   .linkedin-logo {
@@ -235,6 +243,10 @@ table tbody {
   }
 
   .hidden-min {
+    display: none;
+  }
+
+  .desktop {
     display: none;
   }
 }
