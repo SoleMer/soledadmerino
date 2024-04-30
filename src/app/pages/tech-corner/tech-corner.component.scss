@@ -1,0 +1,49 @@
+.content {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.welcome {
+    color: rgb(0, 181, 219);
+    font-family: poppins-black;
+    font-size: xxx-large;
+}
+
+.list {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a {
+    flex: 0.3;
+    text-decoration: none;
+}
+
+
+.card {
+    height: 7em;
+    padding: 1em;
+    border:1px solid rgb(0, 181, 219);
+    border-radius: 10px;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+}
+
+.card:hover {
+    border-color: black;
+    box-shadow: rgba(0,100,147,255) 1px 0 30px;
+}
+
+.card h3 {
+    font-size: x-large;
+    color: rgb(0, 181, 219);
+    margin: auto;
+}
+
+.card p {
+    color: white;
+}

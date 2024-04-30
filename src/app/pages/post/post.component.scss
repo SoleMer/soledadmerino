@@ -1,0 +1,22 @@
+
+.info {
+   // overflow: scroll;
+    //scrollbar-width: none;
+    width: 100%;
+    height: auto;
+}
+
+iframe {
+    position: relative;
+    width: 90%;
+    height: 53em;
+    margin: 2% 5%;
+    background: white;
+    box-shadow: rgba(0,100,147,255) 1px 0 30px;
+}
+
+iframe#document {
+   // width: fit-content;
+   width: 40%;
+   margin: 0 30%;
+}

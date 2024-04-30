@@ -3,7 +3,10 @@
   src: url('./assets/fonts/Poppins/Poppins-Light.ttf') format("opentype");
 }
 
-
+@font-face {
+  font-family: poppins-black;
+  src: url('./assets/fonts/Poppins/Poppins-Black.ttf') format("opentype");
+}
 
 /* You can add global styles to this file, and also import other style files */
 body {
