@@ -1,7 +1,5 @@
 
 .info {
-   // overflow: scroll;
-    //scrollbar-width: none;
     width: 100%;
     height: auto;
 }
@@ -19,4 +17,17 @@ iframe#document {
    // width: fit-content;
    width: 40%;
    margin: 0 30%;
+}
+
+@media (min-width: 850px) and (max-width: 1499px) {
+    iframe {
+        height: 100em;
+    }
+}
+
+
+@media (max-width: 1499px) {
+    iframe {
+        margin: 5%;
+    }
 }
