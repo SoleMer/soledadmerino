@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Post } from '../../models/post';
+import { LogoEnlaceComponent } from '../../common/logo-enlace/logo-enlace.component';
 
 @Component({
   selector: 'app-post',
   standalone: true,
-  imports: [],
+  imports: [LogoEnlaceComponent],
   templateUrl: './post.component.html',
   styleUrl: './post.component.scss'
 })

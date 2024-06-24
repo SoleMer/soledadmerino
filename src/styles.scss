@@ -1,21 +1,29 @@
 @font-face {
-  font-family: poppins;
-  src: url('./assets/fonts/Poppins/Poppins-Light.ttf') format("opentype");
+  font-family: jetbrains-regular;
+  src: url('./assets/fonts/JetBrainsMono/fonts/ttf/JetBrainsMono-Regular.ttf') format("opentype");
 }
 
 @font-face {
-  font-family: poppins-black;
-  src: url('./assets/fonts/Poppins/Poppins-Black.ttf') format("opentype");
+  font-family: jetbrains-bold;
+  src: url('./assets/fonts/JetBrainsMono/fonts/ttf/JetBrainsMono-Bold.ttf') format("opentype");
 }
+
+:root {
+  --sole-blue: #34365a;
+  --sole-pink: #DCB7CF;
+  --sole-white: #F0F0F0;
+  }
 
 /* You can add global styles to this file, and also import other style files */
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
-    font-family: poppins;
+    background-color: var(--sole-blue);
+    font-family: jetbrains-regular;
     
   }
+
+  a { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 
   @media (min-width: 1500px) {
     body {

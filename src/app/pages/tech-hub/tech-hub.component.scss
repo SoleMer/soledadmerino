@@ -1,0 +1,80 @@
+.content {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.welcome {
+    color: var(--sole-pink);
+    font-family: jetbrains-bold;
+    font-size: xxx-large;
+}
+
+.list {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a {
+    flex: 0.3;
+    text-decoration: none;
+}
+
+
+.card {
+    height: 7em;
+    padding: 1em;
+    border:1px solid var(--sole-pink);
+    border-radius: 10px;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+}
+
+.card:hover {
+    border-color: var(--sole-blue);
+    box-shadow: var(--sole-pink) 1px 0 30px;
+}
+
+.card h3 {
+    font-size: x-large;
+    color: var(--sole-pink);
+    margin: auto;
+}
+
+.card p {
+    color: var(--sole-white);
+}
+
+
+@media (min-width: 1500px) {
+
+}
+
+@media (min-width: 850px) and (max-width: 1499px) {
+
+}
+
+@media (max-width: 1499px) {
+    .welcome {
+        font-size: x-large;
+    }
+
+    .list {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    a {
+        flex: 1;
+        text-decoration: none;
+    }
+
+    .card h3 {
+        font-size: large;
+        color: var(--sole-pink);
+        margin: auto;
+    }
+}

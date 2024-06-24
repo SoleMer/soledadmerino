@@ -1,0 +1,43 @@
+.logo {
+    position: fixed;
+    top: 10px;
+}
+
+.img-logo {
+    width: 65%;
+}
+
+.img-logo:hover {
+    filter: drop-shadow(5px 2px 20px var(--sole-pink));
+}
+
+@media (min-width: 850px) and (max-width: 1499px) {
+    .logo {
+        right: 10px;
+        width: 20%;
+    }
+    
+    .img-logo {
+        width: 100%;
+    }
+}
+
+/* Estilos para pantallas grandes (desktop) */
+@media (min-width: 1500px) {
+    .logo {
+        left: 90px;
+        width: 10%;
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 849px) {
+    .logo {
+        right: 10px;
+        width: 30%;
+    }
+    
+    .img-logo {
+        width: 100%;
+    }
+}
