@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '../pages/home/home.component';
 import { CalendarComponent } from '../pages/calendar/calendar.component';
@@ -7,6 +7,8 @@ import { TechHubComponent } from '../pages/tech-hub/tech-hub.component';
 import { PostComponent } from '../pages/post/post.component';
 import { ContactoComponent } from '../pages/contacto/contacto.component';
 import { FormsModule, NgForm } from '@angular/forms';
+import { CourseComponent } from '../pages/course/course.component';
+import { ErrorPageComponent } from '../pages/error-page/error-page.component';
 
 export const routes: Routes = [
   {
@@ -30,10 +32,20 @@ export const routes: Routes = [
       title: 'Tech Hub 2.0 | Sole 2.0'
   },
   {
-      path: 'tech-hub/1',
+      path: 'tech-hub/post/1',
       component: PostComponent,
       title: 'Post | Sole 2.0'
-  }
+  },
+ /* {
+      path: 'tech-hub/course/:courseId',
+      component: CourseComponent,
+      title: 'Course | Sole 2.0'
+  },*/
+  {
+    path: '**',
+    component: ErrorPageComponent,
+    title: '404 | Sole 2.0'
+},
 ];
 
 @NgModule({
@@ -42,7 +54,9 @@ export const routes: Routes = [
     CommonModule,
     RouterModule.forRoot(routes), 
     FormsModule,
-    ContactoComponent],
+    ContactoComponent,
+    NgFor, NgIf
+],
     exports: [RouterModule, FormsModule, NgForm]
 })
 export class AppRoutingModule { }

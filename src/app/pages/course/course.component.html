@@ -1,0 +1,32 @@
+<app-logo-enlace></app-logo-enlace>
+<div *ngIf="isValidCourse(); else error" class="content">
+    <div class="title">
+        <h1>{{course.title}}</h1>
+    </div>
+    <div class="info">
+        <div class="text">
+            <div class="resume">
+                <p>{{course.resume}}</p>
+            </div>
+            <div class="description">
+                <p>{{course.description}}</p>
+            </div>
+            <div class="goals">
+                <h2>Objetivos</h2>
+                <ul>
+                    <li *ngFor="let g of course.goals">{{g}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="video">
+            <video [src]="urlVideo" type='video/mp4' controls>
+            </video>
+        </div>
+    </div>
+    <div class="call-to-action">
+        <button>Hacé click acá y codificá tu versión 2.0</button>
+    </div>
+</div>
+<ng-template #error>
+    <app-error-page></app-error-page>
+</ng-template>

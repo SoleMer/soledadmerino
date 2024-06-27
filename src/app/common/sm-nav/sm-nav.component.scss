@@ -1,3 +1,165 @@
+/*header {
+    top: 0px;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 15px 25px;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 999;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    margin: 0px auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--sole-blue); // fondo azul
+    z-index: 9999;
+    //padding: 10px 20px;
+}
+
+ul {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    //margin: 0;
+    //padding: 0;
+}
+
+a {
+    font-family: jetbrains-regular;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    color: var(--sole-white);
+}
+
+a:hover {
+    color: var(--sole-pink);
+    text-shadow: var(--sole-pink) 5px 2px 20px;
+}
+
+@media (min-width: 1500px) {
+    header {
+      //  width: 100%; // Asegura que el header tenga el 100% de ancho en pantallas grandes
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles) 
+@media (max-width: 1499px) {
+    header {
+        width: 100%;
+    }
+
+    .menu-btn {
+        width: 40px;
+        height: 20px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+        &.is-open {
+            .menu-btn__burger {
+                transform: translateX(-50px);
+                background: transparent;
+            }
+
+            .menu-btn__burger::before {
+                transform: rotate(45deg) translate(35px, -35px);
+                background: var(--sole-pink);
+                box-shadow: var(--sole-pink) 1px 0 30px;
+            }
+
+            .menu-btn__burger::after {
+                transform: rotate(-45deg) translate(35px, 35px);
+                background: var(--sole-pink);
+                box-shadow: var(--sole-pink) 1px 0 30px;
+            }
+        }
+    }
+
+    .menu-btn__burger {
+        width: 60px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .2s ease-in-out;
+    }
+
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .2s ease-in-out;
+    }
+
+    .menu-btn__burger::before {
+        transform: translateY(-16px);
+        z-index: 999;
+    }
+
+    .menu-btn__burger::after {
+        transform: translateY(16px);
+        z-index: 999;
+    }
+
+    ul {
+        display: none;
+
+        &.is-open {
+            display: block;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            padding-left: 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: var(--sole-blue);
+            z-index: 2;
+            gap: 25px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+        }
+    }
+
+    li {
+        padding-bottom: 10px;
+    }
+
+    // Agrega una línea fija del alto del menú burger en la parte superior
+    header::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px; // Ajusta este valor según el alto de tu menú burger
+        background-color: var(--sole-blue);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+    }
+}
+
+*/
+
 header {
     top: 0px;
     display: flex;
@@ -39,7 +201,7 @@ a {
 
 a:hover {
     color: var(--sole-pink);
-    text-shadow: var(--sole-pink) 5px 2px 20px;//rgba(5, 235, 255, 255) 5px 2px 20px; //rgb(0, 181, 219) 1px 0 40px; //rgba(0,100,147,255) 1px 0 10px;
+    text-shadow: var(--sole-pink) 5px 2px 20px; //rgba(5, 235, 255, 255) 5px 2px 20px; //rgb(0, 181, 219) 1px 0 40px; //rgba(0,100,147,255) 1px 0 10px;
 }
 
 aside {
@@ -74,7 +236,7 @@ aside {
         align-items: center;
         cursor: pointer;
         transition: all .2s ease-in-out;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
         &.is-open {
 
@@ -149,6 +311,14 @@ aside {
 
     li {
         padding-bottom: 10px;
+    }
+
+    @media (max-width: 849px) {
+        nav {
+            position: fixed;
+            left: 2vw;
+            top: 0;
+        }
     }
 
 }

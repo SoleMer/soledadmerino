@@ -1,0 +1,154 @@
+.content {
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    color: var(--sole-pink);
+    font-size: x-large;
+}
+
+.info {
+    font-size: large;
+    color: var(--sole-white);
+    text-align: justify;
+}
+
+.text {
+    margin: auto;
+    grid-column: 2/4;
+    grid-row: 1;
+}
+
+.video {
+    grid-column: 1/2;
+    grid-row: 1;
+    text-align: center;
+}
+
+
+
+h2 {
+    color: var(--sole-pink);
+}
+
+.call-to-action {
+    text-align: center;
+    margin-top: 2%;
+}
+
+button {
+    background: var(--sole-pink);
+    color: var(--sole-blue);
+    font-family: jetbrains-bold;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+button:hover {
+    background: var(--sole-blue);
+    color: var(--sole-pink);
+    text-shadow: var(--sole-pink) 5px 2px 20px;
+    box-shadow: var(--sole-pink) 1px 0 30px;
+}
+
+button {
+    background: var(--sole-pink);
+    color: var(--sole-blue);
+    font-family: jetbrains-bold;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+button:hover {
+    background: var(--sole-blue);
+    color: var(--sole-pink);
+    text-shadow: var(--sole-pink) 5px 2px 20px;
+    box-shadow: var(--sole-pink) 1px 0 30px;
+}
+
+video {
+    height: 100%;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: var(--sole-pink) 5px 5px 20px;
+}
+
+iframe {
+    height: 100%;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: var(--sole-pink) 5px 5px 20px;
+}
+
+img {
+    width: 50%;
+    position: relative;
+}
+
+@media (min-width: 1500px) {
+    .info {
+        display: grid;
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-columns: repeat(4, 2fr);
+    }
+
+    .goals {
+        margin: auto;
+        width: 80%;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 1499px) {
+    .content {
+        margin-top: 5vh;
+    }
+}
+
+@media (max-width: 849px) {
+    .content {
+        margin-top: 8vh;
+    }
+}
+
+@media (max-width: 1499px) {
+
+    
+    
+    h1 {
+        font-size: 8vw;
+    }
+    
+    .info {
+        width: 90%;
+        margin: auto;
+    }
+
+    .goals {
+        width: 90%;
+    }
+
+    video {
+        width: 90%;
+    }
+
+    button {
+        width: 80%;
+    height: auto;
+    font-size: 5vw;
+    margin-bottom: 4%;
+    }
+
+}

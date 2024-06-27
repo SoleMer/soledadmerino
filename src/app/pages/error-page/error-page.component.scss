@@ -1,0 +1,122 @@
+.container {
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(3, 2fr);
+  position: relative;
+  top: 40px;
+}
+
+.type-error {
+  text-align: center;
+    grid-column: 2 / 3;
+}
+
+.content {
+  grid-column: 2/4;
+  grid-row: 2;
+  text-align: left;
+  grid-template-columns: repeat(3, 2fr);
+}
+
+.error {
+  position: relative;
+}
+
+.message {
+  font-family: jetbrains-bold;
+  color: var(--sole-pink);
+}
+
+.image {
+  grid-column: 1/2;
+  grid-row: 2;
+  text-align: center;
+}
+
+.img-logo {
+  width: 50%;
+}
+
+.code {
+  font-size: 5em;
+  color: var(--sole-pink);
+}
+
+span {
+  color: var(--sole-white);
+}
+
+.tab {
+  margin-left: 3%;
+}
+
+.pink {
+  color: var(--sole-pink);
+}
+
+.dark-pink {
+  color: var(--sole-dark-pink);
+}
+
+.call-to-action {
+  grid-row: 3;
+}
+
+button{
+  background: var(--sole-pink);
+  color: var(--sole-blue);
+  font-family: jetbrains-bold;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+
+button:hover{
+  background: var(--sole-blue);
+  color: var(--sole-pink); 
+  text-shadow: var(--sole-pink)  5px 2px 20px;
+  box-shadow: var(--sole-pink) 1px 0 30px;
+}
+
+@media (min-width: 1500px) {
+  .error {
+    position: relative;
+    font-size: 
+    1.5em;
+  }
+
+  .call-to-action {
+    grid-column: 2/3;
+    grid-row: 3;
+  }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 1499px) {
+  .image {
+    display: none;
+  }
+
+  .content {
+    grid-column: 1 / 5;
+    width: 90%;
+    margin: auto;
+    height: 35vh;
+  }
+
+  .call-to-action {
+    grid-column: 1/4;
+    margin: auto;
+    width: 80%;
+  }
+
+  button {
+    height: auto;
+  }
+
+}
