@@ -36,11 +36,11 @@ export const routes: Routes = [
       component: PostComponent,
       title: 'Post | Sole 2.0'
   },
- /* {
+  {
       path: 'tech-hub/course/:courseId',
       component: CourseComponent,
       title: 'Course | Sole 2.0'
-  },*/
+  },
   {
     path: '**',
     component: ErrorPageComponent,

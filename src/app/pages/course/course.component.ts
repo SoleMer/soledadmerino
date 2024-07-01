@@ -1,5 +1,5 @@
 import { NgFor, NgIf } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, OnDestroy, Renderer2  } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LogoEnlaceComponent } from '../../common/logo-enlace/logo-enlace.component';
 import { Course } from '../../models/course';
@@ -28,22 +28,32 @@ export class CourseComponent implements OnInit, PipeTransform {
     id: 0,
     title: "",
     resume: "",
+    aditionals: "",
+    support: "",
     description: "",
     goals: [""],
+    requirements: [""],
     videoUrl: "",
+    price: "",
+    launchPrice: "",
   };
   urlVideo: SafeResourceUrl = "";
 
-  constructor(private service: CourseService, protected sanitizer: DomSanitizer) { }
+  constructor(private service: CourseService, protected sanitizer: DomSanitizer, private renderer: Renderer2) { }
 
   ngOnInit(): void {
     this.course = this.service.getCourseById(parseInt(this.courseId));
-    console.log(this.course);
     this.urlVideo = this.transform(this.course.videoUrl);
+    this.renderer.removeClass(document.body, 'ovf-hidden');
+    this.renderer.addClass(document.body, 'ovf-auto');
+  }
+
+  ngOnDestroy() {
+    this.renderer.removeClass(document.body, 'ovf-auto');
+    this.renderer.addClass(document.body, 'ovf-hidden');
   }
 
   transform(url: string) {
-    console.log(url)
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
@@ -53,9 +63,24 @@ export class CourseComponent implements OnInit, PipeTransform {
 
   isValidCourse(): boolean {
     this.urlVideo = this.transform(this.course.videoUrl);
-    console.log(this.course.videoUrl)
-    console.log(this.urlVideo)
     return this.course.id != 0;
   }
+
+  manageClases(): void {
+    this.renderer.removeClass(document.body, 'ovf-hidden');
+    this.renderer.addClass(document.body, 'ovf-auto');
+    /*if (this.course.price == this.course.launchPrice) {
+      //this.renderer.removeClass(document.getElementById("regular"), 'hidden');
+      this.renderer.addClass(document.getElementById("lanzamiento"), 'hidden');
+      this.renderer.addClass(document.getElementById("rebajado"), 'hidden');
+    }*/
+  }
+
+  samePrice(): boolean {
+    console.log(this.course.price == this.course.launchPrice)
+    return this.course.price == this.course.launchPrice;
+  }
+
+
 
 }

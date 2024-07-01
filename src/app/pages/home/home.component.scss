@@ -101,6 +101,7 @@ table tbody {
 @media (min-width: 1500px) {
   .container {
     grid-template-columns: repeat(3, 2fr);
+    margin-top: 10vh;
   }
   .content {
     grid-template-columns: repeat(3, 2fr);

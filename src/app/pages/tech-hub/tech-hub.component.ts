@@ -21,13 +21,13 @@ export class TechHubComponent {
       pdf: "./../../../assets/pdf/MonolitoVsMicroservicios.pdf",
       url: "/tech-hub/post/1"
     },
-   /* {
+    {
       id: 2,
       title: "Curso Microservicios con Spring Boot",
       resume: "Curso intensivo de desarrollo de microservicios con Java Spring Boot, Spring Netflix Eureka, Feign Client, Load Balancer y API Gateway de Spring Cloud.",
       pdf: "./../../../assets/pdf/MonolitoVsMicroservicios.pdf",
       url: "/tech-hub/course/1"
-    }*/
+    }
   ];
 
 }

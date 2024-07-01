@@ -217,7 +217,12 @@ aside {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media (min-width: 1500px) {}
+@media (min-width: 1500px) {   
+    header {
+        position: fixed;
+        background-color: var(--sole-blue);
+    }                                                                                                                                                                                                                                                                                                                                                                      
+}
 
 /* Estilos para pantallas pequeñas (móviles) */
 @media (max-width: 1499px) {

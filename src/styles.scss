@@ -14,29 +14,39 @@
   --sole-pink: #DCB7CF;
   --sole-dark-pink: #d786bb;
   --sole-white: #F0F0F0;
-  }
+}
 
 /* You can add global styles to this file, and also import other style files */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--sole-blue);
-    font-family: jetbrains-regular;
-    
+  margin: 0;
+  padding: 0;
+  background-color: var(--sole-blue);
+  font-family: jetbrains-regular;
+
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button {
+  border-radius: 10px;
+}
+
+@media (min-width: 1500px) {
+  body.ovf-hidden {
+    overflow: hidden;
   }
 
-  a { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+  body.ovf-auto {
+    overflow: auto;
+  }
 
-  @media (min-width: 1500px) {
-    body {
-      overflow: hidden;
-    }
-  
+}
+
+@media (min-width: 850px) and (max-width: 1499px) {
+  body.ovf-hidden {
+    overflow: hidden;
   }
-  
-  @media (min-width: 850px) and (max-width: 1499px) {
-    body {
-      overflow: hidden;
-    }
-  
-  }
+
+}

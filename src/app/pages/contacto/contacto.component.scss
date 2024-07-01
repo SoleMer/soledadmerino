@@ -67,6 +67,12 @@ button{
     
   }
 
+  @media (min-width: 1500px) {
+    .container {
+        margin-top: 10vh;
+    }
+}
+
   /* Estilos para pantallas pequeñas (móviles) */
 @media (max-width: 1499px) {
     input {

@@ -3,6 +3,11 @@ export interface Course {
     title: string;
     resume: string;
     description: string;
+    aditionals: string;
+    support: string;
     goals: string[];
+    requirements: string[];
     videoUrl: string;
+    price: string;
+    launchPrice: string;
 }
