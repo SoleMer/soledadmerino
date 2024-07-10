@@ -32,7 +32,7 @@ export const routes: Routes = [
       title: 'Tech Hub 2.0 | Sole 2.0'
   },
   {
-      path: 'tech-hub/post/1',
+      path: 'tech-hub/post/:postId',
       component: PostComponent,
       title: 'Post | Sole 2.0'
   },

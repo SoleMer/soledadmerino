@@ -1,26 +1,46 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit, Renderer2 } from '@angular/core';
 import { Post } from '../../models/post';
 import { LogoEnlaceComponent } from '../../common/logo-enlace/logo-enlace.component';
+import { ErrorPageComponent } from '../error-page/error-page.component';
+import { NgFor, NgIf } from '@angular/common';
+import { PostService } from '../../services/post.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-post',
   standalone: true,
-  imports: [LogoEnlaceComponent],
+  imports: [LogoEnlaceComponent , ErrorPageComponent, LogoEnlaceComponent, NgFor, NgIf],
   templateUrl: './post.component.html',
   styleUrl: './post.component.scss'
 })
-export class PostComponent {
+export class PostComponent implements OnInit{
 
-  post: Post = {
-    id: 1,
-    title: "Monolito vs Miscroservicios",
-    resume: "La arquitectura de software es un aspecto crucial en el desarrollo de aplicaciones modernas, y la elección entre un enfoque monolítico y microservicios es una decisión a tomar. Los sistemas monolíticos, con su estructura única y centralizada, han sido durante mucho tiempo la norma en el desarrollo de software. Sin embargo, en los últimos años, los microservicios han ganado popularidad como una alternativa flexible y escalable. A continuación veremos las diferencias entre sistemas monolíticos y microservicios, analizando sus características y diferencias",
-    pdf: "MonolitoVsMicroservicios.pdf",
-    url: "/tech-corner/1"
+  private activatedRoute: any = inject(ActivatedRoute);
+  postId: string = this.activatedRoute.snapshot.params['postId'];
+    post: Post = {
+      id: 0,
+      title: "",
+      resume: "",
+      pdf: "",
+      url: "",
+      sections: []
+    }
+
+  constructor(private service: PostService, private renderer: Renderer2) {  }
+
+  ngOnInit(): void {
+    this.post = this.service.getPostById(parseInt(this.postId));
+    this.renderer.removeClass(document.body, 'ovf-hidden');
+    this.renderer.addClass(document.body, 'ovf-auto');
   }
 
-  ngOnInit() {
-    console.log(this.post.pdf);
+  ngOnDestroy() {
+    this.renderer.removeClass(document.body, 'ovf-auto');
+    this.renderer.addClass(document.body, 'ovf-hidden');
+  }
+
+  isValidPost(): boolean {
+    return this.post.id != 0;
   }
 
 }

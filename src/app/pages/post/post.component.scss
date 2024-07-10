@@ -1,7 +1,56 @@
-
+.post {
+    width: 70%;
+    text-align: justify;
+    margin: auto;
+    margin-top: 10vh;
+}
+.title {
+    text-align: center;
+}
+h1, h2, h3 {
+    color: var(--sole-pink);
+}
+p {
+    color: var(--sole-white);
+    font-size: 1vw;
+}
+.image {
+    text-align: center;
+}
+img {
+    width: 25%;
+}
 .info {
+    position: relative;
     width: 100%;
     height: auto;
+}
+a {
+    text-decoration: none;
+    text-align: center;
+}
+.btn {
+    text-align: center;
+}
+button {
+    background: var(--sole-pink);
+    color: var(--sole-blue);
+    font-family: jetbrains-bold;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+button:hover {
+    background: var(--sole-blue);
+    color: var(--sole-pink);
+    text-shadow: var(--sole-pink) 5px 2px 20px;
+    box-shadow: var(--sole-pink) 1px 0 30px;
 }
 
 iframe {
@@ -28,6 +77,9 @@ iframe#document {
     iframe {
         height: 100em;
     }
+    p {
+        font-size: 2vh;
+    }
 }
 
 
@@ -37,5 +89,17 @@ iframe#document {
     }
     .info {
         margin-top: 5vh;    
+    }
+    p {
+        font-size: 2vh;
+    }
+    img {
+        width: 95%;
+    }
+}
+
+@media (max-widh: 8449px) {
+    p {
+        font-size: 2vh;
     }
 }

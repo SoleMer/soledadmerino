@@ -1,4 +1,27 @@
 <app-logo-enlace></app-logo-enlace>
-<div class="info">
-    <iframe src="./../../../assets/pdf/monolitovsmicroservicios.html" frameborder="0"></iframe>
+
+<div *ngIf="isValidPost(); else error" class="post">
+    <div class="title">
+        <h1>{{post.title}}</h1>
+    </div>
+    <div class="info">
+        <div class="resume">
+            <p>{{post.resume}}</p>
+        </div>
+        <div *ngFor="let s of post.sections" class="text">
+            <h2 *ngIf="s.type == 'title'">{{s.title}}</h2>
+            <h3 *ngIf="s.type == 'info'">{{s.title}}</h3>
+            <p *ngIf="s.content != ''">{{s.content}}</p>
+            <div class="image">
+                <img *ngIf="s.imageUrl != ''" src="{{s.imageUrl}}" alt="">
+            </div>
+            <div class="btn">
+                <a *ngIf="s.link != ''" href={{s.link}} target="_blank"><button>{{s.textLink}}</button></a>
+            </div>
+        </div>
+    </div>
 </div>
+
+<ng-template #error>
+    <app-error-page></app-error-page>
+</ng-template>
