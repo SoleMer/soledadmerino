@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import confetti from 'canvas-confetti';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,7 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.write();
+    this.launchConfetti();
   }
 
   write() {
@@ -42,5 +44,30 @@ export class HomeComponent {
     }, 150);
   }
 
+  launchConfetti(): void {
+    const duration = 10 * 300; // Duración de 10 segundos
+    const end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 7,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 },
+        colors: ['#74acdf', '#fffff']
+      });
+      confetti({
+        particleCount: 7,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+        colors: ['#74acdf', '#fffff']
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    }());
+  }
 
 }
