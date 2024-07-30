@@ -45,7 +45,7 @@ export class HomeComponent {
   }
 
   launchConfetti(): void {
-    const duration = 10 * 300; // Duración de 10 segundos
+    const duration = 10 * 300;
     const end = Date.now() + duration;
 
     (function frame() {
