@@ -19,7 +19,7 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.write();
-    this.launchConfetti();
+    //this.launchConfetti();
   }
 
   write() {

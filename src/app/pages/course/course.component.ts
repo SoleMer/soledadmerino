@@ -69,15 +69,9 @@ export class CourseComponent implements OnInit, PipeTransform {
   manageClases(): void {
     this.renderer.removeClass(document.body, 'ovf-hidden');
     this.renderer.addClass(document.body, 'ovf-auto');
-    /*if (this.course.price == this.course.launchPrice) {
-      //this.renderer.removeClass(document.getElementById("regular"), 'hidden');
-      this.renderer.addClass(document.getElementById("lanzamiento"), 'hidden');
-      this.renderer.addClass(document.getElementById("rebajado"), 'hidden');
-    }*/
   }
 
   samePrice(): boolean {
-    console.log(this.course.price == this.course.launchPrice)
     return this.course.price == this.course.launchPrice;
   }
 
