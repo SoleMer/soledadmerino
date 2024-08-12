@@ -37,6 +37,14 @@ export class TechHubComponent {
       pdf: "",
       url: "/tech-hub/post/2",
       sections: []
+    },
+    {
+      id: 4,
+      title: "Entendiendo la recursividad",
+      resume: "La recursividad es un concepto que puede parecer complejo al principio, pero una vez que lo entendemos, se convierte en una herramienta útil en la programación. En términos simples, la recursividad ocurre cuando una función se llama a sí misma para resolver un problema más grande dividiéndolo en problemas más pequeños y manejables.",
+      pdf: "",
+      url: "/tech-hub/post/3",
+      sections: []
     }
   ];
 

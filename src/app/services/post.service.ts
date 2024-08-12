@@ -200,6 +200,65 @@ const posts: Post[] = [
         textLink: ""
       },
     ]
+  },
+  {
+    id: 3,
+    title: "Entendiendo la recursividad",
+    resume: "La recursividad es un concepto que puede parecer complejo al principio, pero una vez que lo entendemos, se convierte en una herramienta útil en la programación. En términos simples, la recursividad ocurre cuando una función se llama a sí misma para resolver un problema más grande dividiéndolo en problemas más pequeños y manejables.",
+    pdf: "",
+    url: "/tech-corner/3",
+    sections: [
+      {
+        postId: 3,
+        order: 1,
+        type: "info",
+        title: "¿Qué es la Recursividad?",
+        content: "La recursividad es una técnica utilizada en programación donde una función se llama a sí misma directa o indirectamente. Este enfoque es útil para resolver problemas que pueden ser descompuestos en subproblemas similares, como cálculos factoriales, recorridos en estructuras de datos como árboles o listas enlazadas, y problemas de combinatoria.",
+        imageUrl: "",
+        link: "",
+        textLink: ""
+      },
+      {
+        postId: 3,
+        order: 2,
+        type: "info",
+        title: "Ejemplo de Recursividad: Factorial de un Número",
+        content: "Uno de los ejemplos más comunes para entender la recursividad es el cálculo del factorial de un número. El factorial de un número n (denotado como n!) es el producto de todos los números enteros positivos desde 1 hasta n. Aquí hay un ejemplo de cómo se calcula utilizando recursividad:",
+        imageUrl: "./../../../assets/post/factorialRecursivo.png",
+        link: "",
+        textLink: ""
+      },
+      {
+        postId: 3,
+        order: 3,
+        type: "info",
+        title: "",
+        content: "En este caso, la función factorial se llama a sí misma con el valor n-1 hasta que alcanza la condición de corte, que es cuando n es igual a 0.",
+        imageUrl: "",
+        link: "",
+        textLink: ""
+      },
+      {
+        postId: 3,
+        order: 4,
+        type: "info",
+        title: "¿Cuándo Usar Recursividad?",
+        content: "La recursividad es especialmente útil en problemas que pueden ser descompuestos en subproblemas idénticos o similares, como en la navegación de árboles y gráficos, problemas de ordenamiento o algoritmos específicos.",
+        imageUrl: "",
+        link: "",
+        textLink: ""
+      },
+      {
+        postId: 2,
+        order: 5,
+        type: "info",
+        title: "Conclusión",
+        content: "Entender la recursividad es fundamental para cualquier programador, ya que es una técnica que, cuando se utiliza correctamente, puede hacer que la resolución de problemas sea más intuitiva y el código más limpio. Si estás comenzando con la recursividad, practicá con problemas simples y luego avanzá a problemas más complejos.",
+        imageUrl: "",
+        link: "",
+        textLink: ""
+      },
+    ]
   }
 ]
 
