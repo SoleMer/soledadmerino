@@ -26,8 +26,8 @@ const courses: Course[] = [
       "Conocimientos básicos de Spring Framework serán útiles, pero no obligatorios."
   ],
     videoUrl: "../../../assets/videos/cursoMicroservicios.mp4",
-    price: "40 USD",
-    launchPrice: "40 USD",
+    price: "50 USD",
+    launchPrice: "50 USD",
   }
 ]
 
